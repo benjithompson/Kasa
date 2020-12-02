@@ -11,7 +11,7 @@ async def main():
     hue = 0
     while(True):
         await bulb.set_hsv(hue, 100, 100)
-        hue = (hue + KASA_HUE_SPEED) % 360
+        hue = (hue + int(KASA_HUE_SPEED)) % 360
 
 
 if __name__ == "__main__":
